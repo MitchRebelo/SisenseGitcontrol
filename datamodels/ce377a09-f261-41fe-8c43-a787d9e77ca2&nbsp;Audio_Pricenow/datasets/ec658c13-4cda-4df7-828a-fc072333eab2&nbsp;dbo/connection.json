@@ -1,0 +1,8 @@
+{
+    "createdByUser": true,
+    "oid": "a405cc89-44e6-4e5b-927d-f158601d8ead",
+    "provider": "sql",
+    "schema": "dbo",
+    "uiParams": {
+    }
+}

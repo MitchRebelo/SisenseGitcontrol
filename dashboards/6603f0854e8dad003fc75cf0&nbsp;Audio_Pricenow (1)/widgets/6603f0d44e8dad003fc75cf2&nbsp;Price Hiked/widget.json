@@ -1,0 +1,442 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "6603f0854e8dad003fc75cf0",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aAudioXwAaPricenow",
+        "fullname": "localhost/Audio_Pricenow",
+        "id": "localhost_aAudioXwAaPricenow",
+        "live": false,
+        "title": "Audio_Pricenow"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[audio_pricenow_new.Date (Calendar)]_years",
+                            "index": 0
+                        },
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/yyyy HH:mm",
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "seconds": "MM/dd/yyyy HH:mm:ss",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "C1BF4-FD17-06",
+                        "jaql": {
+                            "column": "Date",
+                            "datatype": "datetime",
+                            "dim": "[audio_pricenow_new.Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "audio_pricenow_new",
+                            "title": "Days in Date"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "x-axis"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 1,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "71F14-1F7B-15",
+                        "jaql": {
+                            "context": {
+                                "[4B4E1-9BD]": {
+                                    "column": "Alert",
+                                    "datatype": "text",
+                                    "dim": "[audio_pricenow_new.Alert]",
+                                    "merged": true,
+                                    "table": "audio_pricenow_new",
+                                    "title": "Alert"
+                                },
+                                "[84500-044]": {
+                                    "column": "Alert",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aAudioXwAaPricenow",
+                                        "fullname": "localhost/Audio_Pricenow",
+                                        "id": "localhost_aAudioXwAaPricenow",
+                                        "live": false,
+                                        "title": "Audio_Pricenow"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[audio_pricenow_new.Alert]",
+                                    "dimension": "[audio_pricenow_new.Date (Calendar)]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "Price Hiked"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "firstday": "mon",
+                                    "locale": "en-us",
+                                    "merged": true,
+                                    "table": "audio_pricenow_new",
+                                    "title": "Alert"
+                                }
+                            },
+                            "formula": "(DupCount([4B4E1-9BD]),[84500-044])",
+                            "title": "(DupCount([Alert]),[Alert1])",
+                            "type": "measure"
+                        },
+                        "panel": "measures",
+                        "statisticalModels": {
+                            "anomaly": {
+                            },
+                            "breakpoint": {
+                            },
+                            "trend": {
+                                "compare": {
+                                    "isEnabled": false,
+                                    "period": "year"
+                                },
+                                "ignoreAnomalies": false,
+                                "isEnabled": true,
+                                "isViewerDisabled": false,
+                                "trendOnForecast": false,
+                                "trendType": "linear"
+                            }
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "6603f0d44e8dad003fc75cf2",
+    "options": {
+        "aiFeatures": [
+            {
+                "actions": {
+                },
+                "description": "Provide information about your data",
+                "id": "summary_statistics_1569425202576",
+                "isCustomModel": true,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Summary Statistics",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Roughly 80% of the effects come from 20% of the causes",
+                "id": "pareto_1569481451806",
+                "isCustomModel": true,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Pareto",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Another way to show distributions",
+                "id": "percentile_curves_1574252861643",
+                "isCustomModel": true,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Percentile Curves",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Grouping a set of objects in such a way that objects in the same group are more similar to each other than to those in other groups",
+                "id": "cluster_1570673124179",
+                "isCustomModel": true,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Clustering",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "perform two tailed t-test",
+                "id": "two-tailed_test_1574241584650",
+                "isCustomModel": true,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Two-Tailed Test",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "refer to the percentage change of a specific variable within a specific time period and given a certain context",
+                "id": "growth_rate_1572222323562",
+                "isCustomModel": true,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Growth Rates",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Outlier data points detections",
+                "id": "anomaly",
+                "isCustomModel": false,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Anomaly",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Predict the future values of a 2-var-TS, one of which is the target and the\n                    second is explaining variable.\n                    Provide non-symmetric confidence-interval for the above predictions.\n                    Var-Dependence (Score) - the strength of the influence of the explaining\n                    variable on the target one.\n                    XAI (model weights etc)",
+                "id": "forecast",
+                "isCustomModel": false,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "What-If Analysis",
+                "options": {
+                    "hasTargetVar": true,
+                    "targetVar": {
+                        "options": [
+                            "(DupCount([Alert]),[Alert1])"
+                        ],
+                        "sectionTitle": "Target Value",
+                        "targetVarPaneActive": false,
+                        "value": "(DupCount([Alert]),[Alert1])"
+                    }
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Locally (using before and after time series points) estimating the mean of the time series",
+                "id": "local_estimates",
+                "isCustomModel": false,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Local Estimate",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Detect (if exists) Trend-Break-Points and connect those with a trend line",
+                "id": "trend",
+                "isCustomModel": false,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Trend",
+                "options": {
+                }
+            }
+        ],
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillToAnywhere": true,
+        "selector": true,
+        "triggersDomready": true
+    },
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "days_in_date",
+                    "plural": "Days in Date",
+                    "singular": "Days in Date",
+                    "title": "Days in Date"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "widgetDesign": {
+            "widgetBackgroundColor": "#FFFFFF",
+            "widgetBorderColor": "#9EA2AB",
+            "widgetBorderEnabled": false,
+            "widgetCornerRadius": "none",
+            "widgetShadow": "none",
+            "widgetSpacing": "none",
+            "widgetTitleAlignment": "center",
+            "widgetTitleBackgroundColor": "#FFFFFF",
+            "widgetTitleColor": "#5B6372",
+            "widgetTitleDividerColor": "#5B6372",
+            "widgetTitleDividerEnabled": false
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "line/basic",
+    "title": "Price Hiked",
+    "type": "chart/line"
+}

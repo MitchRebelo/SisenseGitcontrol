@@ -1,0 +1,9 @@
+{
+    "createdByUser": true,
+    "fileName": "Competitor Table V2.csv",
+    "oid": "de2581ab-9b78-4f4e-800e-1b0f26cfed48",
+    "provider": "CSV",
+    "schema": "/opt/sisense/storage/tenants/66011a5cd31280002045cb4c/storage/7e/7eee14a5-a991-414d-8454-265a9b8d7e43.csv",
+    "uiParams": {
+    }
+}

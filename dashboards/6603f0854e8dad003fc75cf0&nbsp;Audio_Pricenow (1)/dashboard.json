@@ -1,0 +1,42 @@
+{
+    "dataExploration": false,
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aAudioXwAaPricenow",
+        "fullname": "localhost/Audio_Pricenow",
+        "id": "localhost_aAudioXwAaPricenow",
+        "live": false,
+        "title": "Audio_Pricenow"
+    },
+    "desc": "",
+    "filterRelations": [
+    ],
+    "filters": "./filters.json",
+    "hierarchies": [
+    ],
+    "layout": "./layout.json",
+    "oid": "6603f0854e8dad003fc75cf0",
+    "settings": {
+        "autoUpdateOnFiltersChange": true
+    },
+    "style": {
+        "palette": {
+            "colors": [
+                "#00cee6",
+                "#9b9bd7",
+                "#6EDA55",
+                "#fc7570",
+                "#fbb755",
+                "#218A8C"
+            ],
+            "name": "Vivid"
+        }
+    },
+    "title": "Audio_Pricenow (1)",
+    "widgets": [
+        "./widgets/6603f0d44e8dad003fc75cf2/widget.json",
+        "./widgets/6603f2434e8dad003fc75cfc/widget.json",
+        "./widgets/6603f3954e8dad003fc75d08/widget.json",
+        "./widgets/6603f4684e8dad003fc75d0c/widget.json"
+    ]
+}

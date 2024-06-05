@@ -1,0 +1,375 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "6603f0854e8dad003fc75cf0",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aAudioXwAaPricenow",
+        "fullname": "LocalHost/Audio_Pricenow",
+        "id": "aLOCALHOST_aAUDIOXwAaPRICENOW",
+        "title": "Audio_Pricenow"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "members": {
+                            }
+                        },
+                        "instanceid": "62D47-6AA7-D1",
+                        "jaql": {
+                            "column": "Brand",
+                            "datatype": "text",
+                            "dim": "[audio_pricenow_new.Brand]",
+                            "merged": true,
+                            "table": "audio_pricenow_new",
+                            "title": "Brand"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "FB6E0-8DFD-C9",
+                        "jaql": {
+                            "context": {
+                                "[DA18A-408]": {
+                                    "column": "Brand",
+                                    "datatype": "text",
+                                    "dim": "[audio_pricenow_new.Brand]",
+                                    "merged": true,
+                                    "table": "audio_pricenow_new",
+                                    "title": "Brand"
+                                }
+                            },
+                            "formula": "dupcount([DA18A-408])",
+                            "title": "dupcount([Brand])",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "6603f2434e8dad003fc75cfc",
+    "options": {
+        "aiFeatures": [
+            {
+                "actions": {
+                },
+                "description": "Provide information about your data",
+                "id": "summary_statistics_1569425202576",
+                "isCustomModel": true,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Summary Statistics",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Roughly 80% of the effects come from 20% of the causes",
+                "id": "pareto_1569481451806",
+                "isCustomModel": true,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Pareto",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Another way to show distributions",
+                "id": "percentile_curves_1574252861643",
+                "isCustomModel": true,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Percentile Curves",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Grouping a set of objects in such a way that objects in the same group are more similar to each other than to those in other groups",
+                "id": "cluster_1570673124179",
+                "isCustomModel": true,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Clustering",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "perform two tailed t-test",
+                "id": "two-tailed_test_1574241584650",
+                "isCustomModel": true,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Two-Tailed Test",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "refer to the percentage change of a specific variable within a specific time period and given a certain context",
+                "id": "growth_rate_1572222323562",
+                "isCustomModel": true,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Growth Rates",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Outlier data points detections",
+                "id": "anomaly",
+                "isCustomModel": false,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Anomaly",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Predict the future values of a 2-var-TS, one of which is the target and the\n                    second is explaining variable.\n                    Provide non-symmetric confidence-interval for the above predictions.\n                    Var-Dependence (Score) - the strength of the influence of the explaining\n                    variable on the target one.\n                    XAI (model weights etc)",
+                "id": "forecast",
+                "isCustomModel": false,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "What-If Analysis",
+                "options": {
+                    "hasTargetVar": true,
+                    "targetVar": {
+                        "options": [
+                            "dupcount([Brand])"
+                        ],
+                        "sectionTitle": "Target Value",
+                        "targetVarPaneActive": false,
+                        "value": "dupcount([Brand])"
+                    }
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Locally (using before and after time series points) estimating the mean of the time series",
+                "id": "local_estimates",
+                "isCustomModel": false,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Local Estimate",
+                "options": {
+                }
+            },
+            {
+                "actions": {
+                },
+                "description": "Detect (if exists) Trend-Break-Points and connect those with a trend line",
+                "id": "trend",
+                "isCustomModel": false,
+                "isEnabled": false,
+                "isPin": false,
+                "name": "Trend",
+                "options": {
+                }
+            }
+        ],
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "drillToAnywhere": true,
+        "selector": true,
+        "triggersDomready": true
+    },
+    "questQueryResult": {
+        "isActive": false,
+        "isPending": false
+    },
+    "style": {
+        "automaticHeight": false,
+        "convolution": {
+            "enabled": true,
+            "independentSlicesCount": 7,
+            "minimalIndependentSlicePercentage": 3,
+            "selectedConvolutionType": "byPercentage"
+        },
+        "dataLimits": {
+            "seriesCapacity": 100000
+        },
+        "labels": {
+            "categories": true,
+            "color": "red",
+            "decimals": false,
+            "enabled": true,
+            "fontFamily": "Open Sans",
+            "percent": true,
+            "value": false
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "brand",
+                    "plural": "Brand",
+                    "singular": "Brand",
+                    "title": "Brand"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "pie/classic",
+    "title": "Brands",
+    "type": "chart/pie"
+}

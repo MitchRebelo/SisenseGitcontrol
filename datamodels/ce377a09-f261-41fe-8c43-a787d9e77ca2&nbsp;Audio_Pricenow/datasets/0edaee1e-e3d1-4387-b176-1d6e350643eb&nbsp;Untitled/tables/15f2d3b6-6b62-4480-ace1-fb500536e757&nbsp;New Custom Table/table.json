@@ -1,0 +1,33 @@
+{
+    "buildBehavior": {
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "eb1e6d8f-a640-4c41-969f-b53e8bb0e6ab",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Model_Name",
+            "oid": "27a9455a-67c2-4b33-9486-0f3126692a35",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "dataset": "0edaee1e-e3d1-4387-b176-1d6e350643eb",
+    "expression": {
+        "expression": "./table.sql",
+        "isDatabaseDialect": false,
+        "oid": "c788fd8b-487f-4467-9a12-93e8a4abaf5d"
+    },
+    "hidden": false,
+    "id": "New Custom Table",
+    "isMaterialized": null,
+    "name": "New Custom Table",
+    "oid": "15f2d3b6-6b62-4480-ace1-fb500536e757",
+    "tupleTransformations": [
+    ],
+    "type": "custom"
+}
